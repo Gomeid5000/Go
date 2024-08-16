@@ -1,0 +1,404 @@
+/* تحميل الخط */
+@font-face {
+    font-family: 'GE Dinar One';
+    src: url('fonts/GE_Dinar_One.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* تعريف الألوان */
+:root {
+    --main-bg-color: #FBF6EA;
+    --main-text-color: #DCA429;
+    --highlight-color: #bda228;
+    --section-bg-color: #f8f9fa;
+    --accent-bg-color: #e9ecef;
+}
+
+/* الأنماط العامة */
+body {
+    font-family: 'GE Dinar One', sans-serif;
+    direction: rtl;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+header {
+    background-color: var(--main-bg-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.hero-text {
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--main-text-color);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* الكاروسيل (Slideshow) */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto; /* مركزي */
+    padding: 0 15px; /* مسافة من الجوانب */
+    box-sizing: border-box; /* يشمل الحشو ضمن العرض الكلي */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    position: relative;
+    box-sizing: border-box; /* يشمل الحشو ضمن العرض الكلي */
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 100%;
+    }
+
+    .slides img {
+        object-fit: cover;
+        height: 50vh;
+    }
+}
+
+/* النقاط وأزرار التنقل في الكاروسيل */
+.dots, .prev, .next {
+    display: none;
+}
+
+.about {
+    padding: 20px;
+    background-color: var(--section-bg-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    max-width: 400px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: 2px solid var(--main-text-color);
+    color: var(--main-text-color);
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-button:hover, .tab-button.active {
+    background-color: var(--main-text-color);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tab-content ul li {
+    padding: 10px 0;
+}
+
+.services {
+    padding: 20px;
+    background-color: var(--section-bg-color);
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+}
+
+.services-album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .service-item {
+        flex: 1 1 calc(25% - 20px);
+        max-width: calc(25% - 20px);
+    }
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.service-item h3 {
+    margin: 10px 0;
+    padding: 0 10px;
+    color: var(--main-text-color);
+}
+
+.service-item a {
+    text-decoration: none;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.working-hours {
+    padding: 20px;
+    background-color: var(--accent-bg-color);
+    text-align: center;
+}
+
+.contact-info {
+    padding: 20px;
+    background-color: var(--section-bg-color);
+    text-align: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.contact-info a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.map {
+    padding: 20px;
+    background-color: var(--section-bg-color);
+    text-align: center;
+}
+
+.map iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.feedback {
+    padding: 20px;
+    background-color: var(--accent-bg-color);
+    text-align: center;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: var(--main-text-color);
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: var(--highlight-color);
+}
+
+.client-reviews {
+    padding: 20px;
+    background-color: var(--section-bg-color);
+    text-align: center;
+}
+
+.client-reviews h2 {
+    margin-bottom: 20px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.review-image {
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review-text p {
+    margin: 5px 0;
+}
+
+.photo-gallery {
+    padding: 20px;
+    background-color: var(--section-bg-color);
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+footer {
+    padding: 20px;
+    background-color: var(--main-text-color);
+    color: white;
+    text-align: center;
+}
+
+.footer-container p {
+    margin: 5px 0;
+}
+
+.footer-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}

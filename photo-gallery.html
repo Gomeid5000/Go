@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="معرض صالون جمالك يعرض مجموعة مختارة من الصور لعملائنا والخدمات المقدمة.">
+    <meta name="keywords" content="معرض, صور, صالون, جمال">
+    <meta name="author" content="Your Name">
+    <title>معرض صالون جمالك</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GE+Dinar+One&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* إضافات CSS خاصة بالمعرض */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            background-color: var(--section-bg-color);
+        }
+        .gallery-item {
+            flex: 1 1 calc(33% - 20px);
+            max-width: calc(33% - 20px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+        .back-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: var(--main-text-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: var(--highlight-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/Mask-Group-2.png" alt="شعار الصالون" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="Our-services.html">خدماتنا</a></li>
+                    <li><a href="photo-gallery.html">المعرض</a></li>
+                    <li><a href="tel:123456789">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 4">
+            </div>
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 5">
+            </div>
+            
+            
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 6">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 7">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 8">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 9">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 10">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 11">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://eugeniesalon.com/wp-content/uploads/2019/07/158386006680611-485x442.jpg" alt="صورة معرض 12">
+            </div>
+            
+            
+        </section>
+        <a href="index.html" class="back-button">عودة إلى الصفحة الرئيسية</a>
+    </main>
+
+   <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 صالون جمالك. جميع الحقوق محفوظة</p>
+            <p>يعمل على جميع الأجهزة الذكية. تصميم <a href="#" target="_blank">Gomeid</a></p>
+        </div>
+    </footer>
+</body>
+</html>
