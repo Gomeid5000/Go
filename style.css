@@ -1,7 +1,7 @@
 /* تحميل الخط */
 @font-face {
     font-family: 'GE Dinar One';
-    src: url('fonts/GE_Dinar_One.ttf') format('truetype');
+    src: url('https://gomeid5000.github.io/Go/GE_Dinar_One.ttf') format('truetype');
     font-display: swap;
 }
 
